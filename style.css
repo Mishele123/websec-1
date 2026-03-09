@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main {
+    margin-top: 25px;
+    margin-left: 25px;
+    display: grid;
+    grid-template-areas: 
+    "input input input"
+    "calculate calculate calculate"
+    "result result result";
+    row-gap: 21px;
+    max-width: 550px;
+    border-radius: 8px;
+    background-color: rgb(186, 255, 194);
+}
+
+.top-container {
+    margin: 12px 12px 0 12px;
+    grid-area: input;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.operation {
+    grid-area: select;
+    text-align: center;
+}
+
+.btn {
+    margin-bottom: -5px;
+    height: 35px;
+    grid-area: calculate;
+    height: 32px;
+    width: 160px;
+    justify-self: center;
+    align-self: center;
+    border: 1.5px;
+    border-radius: 10px;
+    border-style: dashed;
+    border-color: red;
+    background: transparent;
+    color: red;
+    font-size: 16px;
+}
+
+.history {
+    color: rgb(241, 134, 134);
+}
+
+.current-result {
+    color: red;
+}
+
+.bot-container {
+    min-height:60px;
+    grid-area: result;
+    align-self: center;
+    border: 1.5px;
+    border-radius: 10px;
+    border-style: dashed;
+    border-color: red;
+    background: transparent;
+    font-size: 18px;
+    padding: 10px 0px 10px 10px;
+    margin: 0 12px 8px 12px;
+}
+
+
+.input {
+    height: 32px;
+    width: 200px;
+    border: 1.5px;
+    border-radius: 10px;
+    border-style: dashed;
+    border-color: red;
+    background: transparent;
+    color: red;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.operation {
+    height: 32px;
+    width: 80px;
+    border: 1.5px;
+    border-radius: 10px;
+    border-style: dashed;
+    border-color: red;
+    background: transparent;
+    color: red;
+    font-size: 18px;
+}
+
+.input-error {
+    border: 3px solid #ffcc99
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        margin: 25px 15px;
+        grid-template-areas: 
+            "input"
+            "input"
+            "input"
+            "calculate"
+            "result";
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .top-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        margin: 12px 12px 0 12px;
+    }
+
+    .input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .operation {
+        width: 120px;
+        align-self: center;
+    }
+
+    .btn {
+        width: 120px;
+        margin: 0 auto;
+    }
+
+    .bot-container {
+        margin: 0 12px 12px 12px;
+        min-height: 80px;
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="main">
+        <div class="top-container">
+            <input type="number" class="input" id="input1">
+            <select class="operation" id="operation">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input type="number" class="input" id="input2">
+        </div>
+        <button class="btn" id="btn">подсчитать</button>
+        <div class="bot-container">
+            <div class="history"></div>
+            <div class="current-result"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
